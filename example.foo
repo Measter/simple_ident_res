@@ -1,0 +1,20 @@
+module A1 {
+    module A2 {
+        function a_func() {
+
+        }
+    }
+    
+    function c_func() {
+        B1.b_func();
+        A2.a_func();
+    }
+}
+
+module B1 {
+    using A1.A2;
+
+    function b_func() {
+        A2.a_func();
+    }
+}
